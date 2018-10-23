@@ -119,11 +119,15 @@ public class LinkedLab07<E> {
 	public void moveFirstToLast() {
 	    //TO DO: fill in the body of this method
 		
+		if (isEmpty()) throw new NoSuchElementException("List is Empty.");
+		if ( size > 1) {
+			Node move = head.next;
+			head.next = move.next;
+			tail.next = move;
+			tail = move;
+			move.next = null;
+		}
 		
-		Node move = head;
-		head = head.next;
-		tail.next = move;
-		tail = move;
 		
 		
 		
