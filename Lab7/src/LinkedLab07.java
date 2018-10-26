@@ -137,22 +137,52 @@ public class LinkedLab07<E> {
 	public void moveLastToFirst() {
 	    //TO DO: fill in the body of this method
 		
-		//Node anotherMove = tail;
-		//tail = tail.next;
-		//head.next = anotherMove;
-		//head = anotherMove;
-
+		if (isEmpty()) throw new NoSuchElementException("List is Empty.");
+		if (size > 1) {
+			
+			Node anotherMove = tail;
+			tail = getNodeBefore(size - 1);
+			tail.next = null;
+			anotherMove.next = head.next; 
+			head.next = anotherMove;
+			
+		}
 	}
 	
 	public void swap(int i, int j) {
 	    //TO DO: fill in the body of this method
-		//getNodeBefore(1)
-
+		
+		if (isEmpty()) throw new IndexOutOfBoundsException("Properly caught bad arguments. ");
+		if ( size > 1 ) {
+			if ( i == j)
+				return;
+				Node before1 = getNodeBefore(i);
+				Node temp1 = before1.next;
+				Node before2 = getNodeBefore(j);
+				Node temp2 = before2.next;
+				if (temp1 != null || temp2 == null)
+					return;
+				before1.next = temp2;
+				before2.next = temp1;
+				Node temp3 = temp1.next;
+				temp1 = temp2.next;
+				temp2.next = temp3;
+		}
 	}
 	
 	public void reverse() {
-	    //TO DO: fill in the body of this method
+		//TO DO: fill in the body of this method
 		
+		
+		//find first and last node and use a pointer
+		//call swap method and pass it 
+		//swap ends first
+		
+		while (temp1 != temp2.next || temp1 != temp2) {
+			int i = 1;
+			//size - i
+			Node temp2 = getNodeBefore(size-1).next;
+		}
 	}
 	
 	@Override
