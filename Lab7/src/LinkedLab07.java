@@ -1,7 +1,8 @@
 import java.util.NoSuchElementException;
 
-//Do not create a new node or change 
-//Do not use set, remove, or add
+//Jessica Parker
+//Note: Attended tutoring
+//October 28, 2018
 
 public class LinkedLab07<E> {
 
@@ -173,17 +174,22 @@ public class LinkedLab07<E> {
 	public void reverse() {
 		//TO DO: fill in the body of this method
 		
-		
-		//find first and last node and use a pointer
-		//call swap method and pass it 
-		//swap ends first
-		
-		while (temp1 != temp2.next || temp1 != temp2) {
-			int i = 1;
-			//size - i
-			Node temp2 = getNodeBefore(size-1).next;
+		/*Node current = head;
+	 	Node previous = null;
+		Node next = null;
+	
+		while ( current != null ) {
+			next = current.next;
+			current.next = previous;
+			previous = current;
+			current = next;
 		}
+		
+			head = previous;*/
 	}
+	
+	
+	
 	
 	@Override
 	public String toString() {
