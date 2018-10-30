@@ -2,7 +2,7 @@ import java.util.NoSuchElementException;
 
 //Jessica Parker
 //Note: Attended tutoring
-//October 28, 2018
+//October 29, 2018
 
 public class LinkedLab07<E> {
 
@@ -178,7 +178,7 @@ public class LinkedLab07<E> {
 	public void reverse() {
 		// TO DO: fill in the body of this method
 
-		if (size == 2) {	
+		if (size == 2) {
 			moveFirstToLast();
 			return;
 		}
